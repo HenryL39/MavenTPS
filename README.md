@@ -1,2 +1,2 @@
-# MavenTPS
-Regroupe tout les TP Maven / Nexus / Artifactory (un TP par branche)
+# MavenWebProjet
+Projet maven spring boot lancé sur un stie web (tomcat en localhost)
