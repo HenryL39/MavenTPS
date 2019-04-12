@@ -105,15 +105,10 @@
     </reporting>
 -->
 <distributionManagement>
-<repository>
-<id>nexus</id>
-<name>maven-releases</name>
-<url>http://localhost:8081/repository/maven-releases/</url>
-</repository>
-<snapshotRepository>
-<id>nexus</id>
-<name>maven-snapshots</name>
-<url>http://localhost:8081/repository/maven-snapshots/</url>
-</snapshotRepository>
+    <snapshotRepository>
+        <id>artifactory</id>
+        <name>localhost.localdomain-snapshots</name>
+        <url>http://localhost:8081/artifactory/libs-snapshot</url>
+    </snapshotRepository>
 </distributionManagement>
 </project>
