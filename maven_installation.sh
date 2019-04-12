@@ -6,7 +6,7 @@ then
     echo "Maven déjà existant" 
 else
     wget $MAVEN_LINK
-	ar xf apache-maven-3.6.0-bin.tar.gz
+	tar xf apache-maven-3.6.0-bin.tar.gz
 	mv apache-maven-3.6.0 /opt
 fi
 if [ -d "/opt/jdk1.8.0_201" ] 
@@ -31,7 +31,7 @@ EOL
 fi
 
 mvn -v
-if $? -eq 0
+if [ $? -eq 0 ]
 then
 	echo "installation terminée"
 fi
