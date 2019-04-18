@@ -20,20 +20,19 @@ then
 else
 	touch /etc/systemd/system/nexus.service
 	cat >/etc/systemd/system/nexus.service <<EOL
-	[Unit]
-	Description=nexus service
-	After=network.target
-	  
-	[Service]
-	Type=forking
-	LimitNOFILE=65536
-	ExecStart=/opt/nexus-3.16.0-01/bin/nexus start
-	ExecStop=/opt/nexus-3.16.0-01/bin/nexus stop
-	User=nexus
-	Restart=on-abort
-	  
-	[Install]
-	WantedBy=multi-user.target
+[Unit]
+Description=nexus service
+After=network.target
+  
+[Service]
+Type=forking
+LimitNOFILE=65536
+ExecStart=/opt/nexus-3.16.0-01/bin/nexus start
+ExecStop=/opt/nexus-3.16.0-01/bin/nexus stop
+User=nexus
+Restart=on-abort 
+[Install]
+WantedBy=multi-user.target
 EOL
 fi
 systemctl daemon-reload
